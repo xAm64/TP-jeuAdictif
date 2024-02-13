@@ -3,22 +3,28 @@ body {margin: 0; padding: 0}
 /* importer police */
 @font-face {
     font-family: "digital";
-    src:
-    local("DIGITALDREAM"),
-    url("../fonts/DIGITALDREAM.ttf") format("opentype") tech(color-COLRv1),
-    url("../fonts/DIGITALDREAM.ttf") format("opentype"),
-    url("../fonts/DIGITALDREAM.ttf") format("woff");
+    src: url("../fonts/digital/DIGITALDREAM.ttf");
+}
+@font-face {
+    font-family: "JotiOne";
+    src: url("../fonts/joti/JotiOne-Regular.ttf");
+}
+/* optimisation */
+.game,
+#game-over {
+    justify-content: center;
+    display: flex;
+    align-items: center;
 }
 /* espace pour le jeu */
 .game {
-    background: #020;
+    background: #020; /* possible de mettre une image ici */
+    color: #9F9;
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
     height: 100vh;
     margin: 0;
+    font-family: 'JotiOne';
 }
 /* redimmentionnement des images */
 .game-over-img {
@@ -27,9 +33,6 @@ body {margin: 0; padding: 0}
 /* espace fin du jeu */
 #game-over {
     position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     flex-flow: column;
     width: 250px;
     height: 300px;
@@ -73,12 +76,13 @@ canvas {
 /* Bouttons */
 .btn {
     cursor: pointer;
-    background-color: #6B6;
+    background: #6B6;
     border: none;
     padding: 10px 20px;
     color: white;
+    border: 1px solid #6F6;
     border-radius: 5px;
-    font-family: gruppo, sans-serif;
+    font-family: 'digital';
     transition: background-color .1s ease-in;
 }
 .btn:hover {
