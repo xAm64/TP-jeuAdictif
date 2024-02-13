@@ -1,0 +1,42 @@
+/* espace pour le jeu */
+.game {
+    background: #020; /* possible de mettre une image ici */
+    color: #9F9;
+    position: relative;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    font-family: 'JotiOne';
+}
+/* redimmentionnement des images */
+.game-over-img {
+    width: 150px;
+}
+/* espace fin du jeu */
+#game-over {
+    position: absolute;
+    flex-flow: column;
+    width: 250px;
+    height: 300px;
+    visibility: hidden;
+    opacity: 0;
+}
+/* règles du jeu */
+.rules p {
+    margin-bottom: .5rem;
+    margin-top: 0;
+}
+/* optimisation */
+.game,
+#game-over {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+/* espace du jeu */
+canvas {
+    background: black; /* possible d'importer une image ici */
+    display: block;
+    border-radius: 4px;
+}

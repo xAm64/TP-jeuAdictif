@@ -1,0 +1,60 @@
+/* boutton restart */
+#restart {
+    color: #9ab2c3;
+    cursor: pointer;
+    padding: 4px 8px;
+    line-height: 1.5;
+    border: 1px solid #b19ac2;
+    border-radius: 4px;
+    text-align: center;
+    transition: .1s ease-in-out;
+}
+#restart:hover {
+    background: #2B2;
+}
+/* audio */
+.sound-container {
+    position: absolute;
+    top: 50%;
+    right: 15%;
+}
+.sound-container img {
+    width: 40px;
+    height: auto;
+    transition: .1s ease-in-out;
+}
+.sound-container:hover {
+    box-shadow: 1px 1px 3px rgba(255, 255, 255, .5);
+}
+/* espace du jeu */
+canvas {
+    background: black; /* possible d'importer une image ici */
+    display: block;
+    border-radius: 4px;
+}
+/* Bouttons */
+.btn {
+    cursor: pointer;
+    background: #6B6;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    border: 1px solid #6F6;
+    border-radius: 5px;
+    font-family: 'digital';
+    transition: background-color .1s ease-in;
+}
+.btn:hover {
+    background-color: #6F6;
+}
+.btn:focus {
+    outline: none;
+}
+.btn:active {
+    transform: scale(.98);
+}
+.rules-btn {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
