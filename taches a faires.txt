@@ -1,0 +1,17 @@
+Créer HTML / CSS (trouver icone)
+Chercher bruitages sur universal soundBank ( https://universal-soundbank.com/ ).
+Organiser les JS
+Créer platoforme
+créer balle
+créer briques (demande mathématiques)
+Annimer tout ça
+Ajouter bruitages
+gérer le score et vies, game over
+Gérer le game over pour relancer et pause
+Gérer l'audio si on veux couper le son
+
+## challenges facultatifs selon temps restant ##
+Remplacer balle par tête de mohamed
+changer fond noir par une image abstraite foncé
+Générer des briques de couleurs avec un score différent
+Générer des combinaisons de briques différentes au niveaux supérieurs (ex pyramide inversé)
