@@ -8,8 +8,27 @@
     <title>TP - Casse brique</title>
 </head>
 <body>
-    <section class="game">
-        mon contenue ici
+    <section class="game" id=""game>
+        <!-- Règles du jeu -->
+        <button id="rules-btn" class="btn-rules">Règles du jeu</button>
+        <div id=""rules>
+            <p>Utiliser les touches &#8592; et &#8594; du clavier pour déplacer la planche<br>
+            La balle doit rebondir sur la planche pour rentrer dans les briques.</p>
+            <p>Si elle tombe, vous perdez une vie. Le jeu s'arrête quand vous n'aez plus de vie</p>
+            <button class="btn close-btn">Sortir</button>
+        </div>
+        <!-- icone son -->
+        <div class="sound-container">image du son</div>
+        <!-- Fin du jeu -->
+        <div id="game-over">
+            image gagné
+            image perdu
+            <div id="restart">Rejouer</div>
+        </div>
+        <!-- Affichage principale du jeu -->
+        <canvas id=""canvas width="600" heigth="500"></canvas>
     </section>
+    <!-- Scripts -->
+    
 </body>
 </html>
