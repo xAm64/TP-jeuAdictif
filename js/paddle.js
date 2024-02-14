@@ -1,3 +1,5 @@
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 //variables
 //largeur de la planche
 let paddle_width = 100;
@@ -38,9 +40,9 @@ function drawPaddle(){
 
 //déplacer la planche
 function movePaddle(){
-    if (leftArrow) {
+    if (leftArrow && paddle.x > 0) {
         paddle.x -= paddle.dx
-    } else if (rightArrow){
+    } else if (rightArrow && paddle.x + paddle.w < canvas.width){
         paddle.x += paddle.dx
     }
 }

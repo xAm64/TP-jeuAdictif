@@ -16,7 +16,7 @@
         <div id="rules" class="rules">
             <h2>Règles du jeu</h2>
             <p>
-                Utiliser les touches <strong class=white">&#8592;</strong> et <strong class=white">&#8594;</strong> du clavier pour déplacer la planche<br>
+                Utiliser les touches <span class="white">&#8592;</span> et <span class="white">&#8594;</span> du clavier pour déplacer la planche<br>
                 La balle doit rebondir sur la planche pour casser les briques.<br>
                 Si elle tombe, vous perdez une vie.<br>
                 Le jeu s'arrête quand vous n'avez plus de vie.
@@ -32,13 +32,14 @@
             <div id="restart">Rejouer</div>
         </div>
         <!-- Affichage principale du jeu -->
+        <div id="informations"><span>Vies 3</span> Score 0 level 0</div>
         <canvas id="canvas" width="600" height="500"></canvas>
     </section>
     <!-- Scripts -->
-    <script src="js/game.js"></script>
     <script src="js/components.js"></script>
     <script src="js/paddle.js"></script>
     <script src="js/ball.js"></script>
     <script src="js/briks.js"></script>
+    <script src="js/game.js"></script>
 </body>
 </html>
