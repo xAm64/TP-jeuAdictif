@@ -1,7 +1,22 @@
+/* optimisation */
+.game,
+#game-over,
+.rules {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+#game-over,
+.rules {
+    position: absolute;
+    flex-flow: column;
+    opacity: 0.9;
+    visibility: hidden;
+}
 /* espace pour le jeu */
 .game {
-    background: #020; /* possible de mettre une image ici */
-    color: #9F9;
+    background: rgb(37, 23, 70); /* possible de mettre une image ici */
+    color: #9ab9c2;
     position: relative;
     flex-direction: column;
     height: 100vh;
@@ -9,29 +24,24 @@
     font-family: 'JotiOne';
 }
 /* espace fin du jeu */
-#game-over {
-    position: absolute;
-    flex-flow: column;
-    width: 250px;
-    height: 300px;
-    visibility: hidden;
-    opacity: 0;
-}
+#game-over {width: 400px;}
 /* règles du jeu */
+.rules {
+    background: rgb(37, 23, 70);
+    color: #9ab9c2;
+    width: 492px;
+    padding: 8px;
+    border-radius: 6px;
+    transition: visibility 400ms;
+}
+.rules .show {visibility: visible !important;}
 .rules p {
     margin: 0 auto .5rem auto;
-}
-/* optimisation */
-.game,
-#game-over {
-    justify-content: center;
-    display: flex;
-    align-items: center;
 }
 
 /* espace du jeu */
 canvas {
-    background: black; /* possible d'importer une image ici */
+    background: black url(../images/background-game.png) no-repeat center; /* possible d'importer une image ici */
     display: block;
     border-radius: 4px;
     border-style: inset inset none inset;

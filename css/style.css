@@ -17,3 +17,7 @@ body {margin: 0; padding: 0}
 #sound-icon {
     width: 30px;
 }
+.white {
+    border: 1px solid #fff;
+    color: #fff;
+}
