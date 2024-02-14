@@ -26,12 +26,6 @@
 .sound-container:hover {
     box-shadow: 1px 1px 3px rgba(255, 255, 255, .5);
 }
-/* espace du jeu */
-canvas {
-    background: black; /* possible d'importer une image ici */
-    display: block;
-    border-radius: 4px;
-}
 /* Bouttons */
 .btn {
     cursor: pointer;

@@ -1,6 +1,7 @@
-Créer HTML / CSS (trouver icone), banque d'image gratuites https://pixabay.com/fr/
-Chercher bruitages sur universal soundBank ( https://universal-soundbank.com/ ).
-Organiser les JS
+Créer HTML / CSS (trouver icone), (banque d'image gratuites https://pixabay.com/fr/) OK(voir avec autres pour voter X icone)
+Chercher bruitages sur universal soundBank ( https://universal-soundbank.com/ ). OK(voir avec autres pour voter)
+Chercher et utiliser une police (1001 font, prendre une tout usages libres). OK (Voir pour voter)
+Organiser les JS OK
 Créer platoforme
 créer balle
 créer briques (demande mathématiques)
