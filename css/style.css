@@ -9,3 +9,11 @@ body {margin: 0; padding: 0}
     font-family: "JotiOne";
     src: url("../fonts/joti/JotiOne-Regular.ttf");
 }
+
+/* redimmentionnement des images */
+.game-over-img {
+    width: 150px;
+}
+#sound-icon {
+    width: 30px;
+}

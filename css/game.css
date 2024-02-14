@@ -8,10 +8,6 @@
     margin: 0;
     font-family: 'JotiOne';
 }
-/* redimmentionnement des images */
-.game-over-img {
-    width: 160px;
-}
 /* espace fin du jeu */
 #game-over {
     position: absolute;
@@ -38,4 +34,5 @@ canvas {
     background: black; /* possible d'importer une image ici */
     display: block;
     border-radius: 4px;
+    border-style: inset inset none inset;
 }

@@ -10,6 +10,7 @@ Ajouter bruitages
 gérer le score et vies, game over
 Gérer le game over pour relancer et pause
 Gérer l'audio si on veux couper le son
+Mettre des textures ou couleurs aux briques
 
 ## challenges facultatifs selon temps restant ##
 Remplacer balle par tête de mohamed
