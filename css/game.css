@@ -34,7 +34,6 @@
     border-radius: 6px;
     transition: visibility 400ms;
 }
-.rules .show {visibility: visible !important;}
 .rules p {
     margin: 0 auto .5rem auto;
 }
