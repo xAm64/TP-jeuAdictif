@@ -9,9 +9,13 @@
     justify-content: center;
     display: flex;
     align-items: center;
+    top: 0;
 }
 /* espace fin du jeu */
-#game-over {width: 400px;}
+#game-over {
+    width: 400px;
+    padding: 0 50%;
+}
 /* règles du jeu */
 .rules {
     background: rgb(37, 23, 70);
@@ -23,4 +27,41 @@
 }
 .rules p {
     margin: 0 auto .5rem auto;
+}
+
+#gameSpace {
+    position: relative;
+    top: 30px;
+    width: 600px; height: 550px;
+    box-sizing: border-box;
+    background: black url(../images/background-game.png) no-repeat center;
+    margin: 0 auto;
+    border: 3px solid #da87f1;
+    border-style: inset inset none inset;
+    border-radius: 5px;
+}
+
+#paddle {
+    position: absolute;
+    bottom: 30px;
+    left: 250px;
+    width: 100px; height: 20px;
+    background: #da87f1;
+}
+
+#ball {
+    position: absolute;
+    left: 285px;
+    bottom: 100px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: url(../images/momo.png) center;
+}
+
+.brick {
+    position: absolute;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    background: #999;
 }

@@ -8,42 +8,6 @@ body {
 /* importer police */
 @font-face { font-family: "digital"; src: url("../fonts/digital/DIGITALDREAM.ttf");}
 @font-face { font-family: "JotiOne"; src: url("../fonts/joti/JotiOne-Regular.ttf");}
-#gameSpace {
-    position: relative;
-    top: 30px;
-    width: 600px; height: 550px;
-    box-sizing: border-box;
-    background: black url(../images/background-game.png) no-repeat center;
-    margin: 0 auto;
-    border: 3px solid #da87f1;
-    border-style: inset inset none inset;
-}
-
-#paddle {
-    position: absolute;
-    bottom: 30px;
-    left: 250px;
-    width: 100px; height: 20px;
-    background: #da87f1;
-}
-
-#ball {
-    position: absolute;
-    left: 285px;
-    bottom: 100px;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background: url(../images/momo.png) center;
-}
-
-.brick {
-    position: absolute;
-    border: 1px solid #fff;
-    border-radius: 3px;
-    background: #999;
-}
-
 
 /* redimmentionnement des images */
 .game-over-img {
@@ -60,12 +24,12 @@ body {
 }
 .game-informations {
     font-family: "digital";
-    position: fixed;
+    position: absolute;
     top: 0;
     height: 30px;
     margin: 5px auto 0 auto; padding: 0 42%;
     font-size: 25px;
-    color: #43b6d6;
+    color: #3ac4f2;
 }
 .game-informations img {
     vertical-align: top;
