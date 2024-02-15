@@ -22,14 +22,21 @@ function moveBall() {
     }
 
     // Limit Bottom
-    if (currentPositionTop + ballRadius * 2 > gameSpace.offsetHeight) {
-        gameOver.classList.add("show");
-        restart.classList.add("show");
-        cancelAnimationFrame(animationFrame);
-        restart.addEventListener("click", () =>{
-            location.reload();
-        });
-
+    if (currentPositionTop + (ballRadius * 2) > gameSpace.offsetHeight) {
+        lifes --;
+        if (lifes > 0){
+            currentPositionLeft = 285;
+            currentPositionTop = 400;
+            ballDy = -2;
+        } else {
+            ballDy = 0;
+            ballDx = 0;
+            gameOver.classList.add("show");
+            restart.classList.add("show");
+            restart.addEventListener("click", () =>{
+                location.reload();
+            });
+        }
     }
 
     currentPositionLeft += ballDx;

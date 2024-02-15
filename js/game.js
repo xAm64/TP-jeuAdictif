@@ -2,8 +2,9 @@ const rules = document.getElementById("rules");
 const rulesButton = document.getElementById("rules-btn");
 const closeRules = document.getElementById("close-btn");
 const gameOver = document.getElementById("you-loose");
+const restart = document.getElementById("restart");
 
-let life = 3;
+let lifes = 3;
 let moveLeft = false;
 let moveRight = false;
 
@@ -47,7 +48,7 @@ function onKeyUp(event) {
 //colisions
 function checkCollisionPaddle() {
     let ballX = ball.offsetLeft + ballRadius;
-    let ballBottomY = ball.offsetTop + ballRadius * 2;
+    let ballBottomY = ball.offsetTop + ballRadius;
 
     let paddleLeft = paddle.offsetLeft;
     let paddleTop = paddle.offsetTop;
