@@ -1,2 +1,27 @@
-//créer la planche ici
-console.log("Le paddle charge");
+//vitesse du paddle
+let step = 10;
+
+function movePaddle() {
+
+
+    let currentPositionLeft = paddle.offsetLeft;
+
+    if (moveRight) {
+        currentPositionLeft += step;
+    }
+    else if(moveLeft) {
+        currentPositionLeft -= step;
+    }
+
+    // Limit Left
+    if(currentPositionLeft < 0) {
+        currentPositionLeft = 0;
+    }
+
+    // Limit Right
+    if(currentPositionLeft + paddle.offsetWidth > gameSpace.offsetWidth) {
+        currentPositionLeft = gameSpace.offsetWidth - paddle.offsetWidth;
+    }
+
+    paddle.style.left = currentPositionLeft + 'px';
+}

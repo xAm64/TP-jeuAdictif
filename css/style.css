@@ -1,14 +1,48 @@
 * {box-sizing: border-box;}
-body {margin: 0; padding: 0}
+body {
+    margin: 0; padding: 0;
+    width: 100%; height: 100%;
+    background: #12021f
+}
+
 /* importer police */
-@font-face {
-    font-family: "digital";
-    src: url("../fonts/digital/DIGITALDREAM.ttf");
+@font-face { font-family: "digital"; src: url("../fonts/digital/DIGITALDREAM.ttf");}
+@font-face { font-family: "JotiOne"; src: url("../fonts/joti/JotiOne-Regular.ttf");}
+#gameSpace {
+    position: relative;
+    width: 600px; height: 550px;
+    box-sizing: border-box;
+    background: black url(../images/background-game.png) no-repeat center;
+    margin: 0 auto;
+    border: 3px solid #da87f1;
+    border-style: inset inset none inset;
 }
-@font-face {
-    font-family: "JotiOne";
-    src: url("../fonts/joti/JotiOne-Regular.ttf");
+
+#paddle {
+    position: absolute;
+    bottom: 30px;
+    left: 250px;
+    width: 100px; height: 20px;
+    background: #da87f1;
 }
+
+#ball {
+    position: absolute;
+    left: 285px;
+    bottom: 100px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: url(../images/momo.png) center;
+}
+
+.brick {
+    position: absolute;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    background: #999;
+}
+
 
 /* redimmentionnement des images */
 .game-over-img {
@@ -19,5 +53,9 @@ body {margin: 0; padding: 0}
 }
 .white {
     border: 1px solid #fff;
+    border-radius: 2px;
     color: #fff;
+    padding : 0 5px;
 }
+
+.show {visibility: visible !important;}

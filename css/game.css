@@ -1,5 +1,4 @@
 /* optimisation */
-.game,
 #game-over,
 .rules {
     justify-content: center;
@@ -8,20 +7,11 @@
 }
 #game-over,
 .rules {
+    font-family: "JotiOne";
     position: absolute;
     flex-flow: column;
     opacity: 0.9;
     visibility: hidden;
-}
-/* espace pour le jeu */
-.game {
-    background: rgb(37, 23, 70); /* possible de mettre une image ici */
-    color: #9ab9c2;
-    position: relative;
-    flex-direction: column;
-    height: 100vh;
-    margin: 0;
-    font-family: 'JotiOne';
 }
 /* espace fin du jeu */
 #game-over {width: 400px;}
@@ -34,15 +24,6 @@
     border-radius: 6px;
     transition: visibility 400ms;
 }
-.rules .show {visibility: visible !important;}
 .rules p {
     margin: 0 auto .5rem auto;
-}
-
-/* espace du jeu */
-canvas {
-    background: black url(../images/background-game.png) no-repeat center; /* possible d'importer une image ici */
-    display: block;
-    border-radius: 4px;
-    border-style: inset inset none inset;
 }
