@@ -1,4 +1,5 @@
-let step = 15;
+//vitesse du paddle
+let step = 10;
 
 function movePaddle() {
 

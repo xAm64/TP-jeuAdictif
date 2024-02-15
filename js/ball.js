@@ -1,5 +1,5 @@
-let ballRadius = 34;
-let ballDx = 2;
+let ballRadius = 30;
+let ballDx = Math.floor(Math.random() * 6) -2;
 let ballDy = -2;
 
 function moveBall() {
@@ -23,10 +23,12 @@ function moveBall() {
 
     // Limit Bottom
     if (currentPositionTop + ballRadius * 2 > gameSpace.offsetHeight) {
-        // ballDy = -ballDy;
-        alert('GameOver');
+        gameOver.classList.add("show");
+        restart.classList.add("show");
         cancelAnimationFrame(animationFrame);
-        location.reload();
+        restart.addEventListener("click", () =>{
+            location.reload();
+        });
 
     }
 

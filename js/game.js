@@ -1,6 +1,7 @@
 const rules = document.getElementById("rules");
 const rulesButton = document.getElementById("rules-btn");
 const closeRules = document.getElementById("close-btn");
+const gameOver = document.getElementById("you-loose");
 
 let life = 3;
 let moveLeft = false;
