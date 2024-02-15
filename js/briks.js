@@ -3,7 +3,6 @@ const brickHeight = 20;
 const brickMargin = 10;
 let positionY = 30;
 let row = 3;
-let bricks = [];
 let container = document.getElementById('gameSpace');
 
 function createBrick(){
@@ -28,8 +27,6 @@ function createBrick(){
     }
     
 }
-
-createBrick();
 
 
 
