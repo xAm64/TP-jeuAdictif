@@ -10,6 +10,7 @@ body {
 @font-face { font-family: "JotiOne"; src: url("../fonts/joti/JotiOne-Regular.ttf");}
 #gameSpace {
     position: relative;
+    top: 30px;
     width: 600px; height: 550px;
     box-sizing: border-box;
     background: black url(../images/background-game.png) no-repeat center;
@@ -30,8 +31,8 @@ body {
     position: absolute;
     left: 285px;
     bottom: 100px;
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     background: url(../images/momo.png) center;
 }
@@ -46,7 +47,7 @@ body {
 
 /* redimmentionnement des images */
 .game-over-img {
-    width: 150px;
+    width: 250px;
 }
 #sound-icon {
     width: 30px;
@@ -57,5 +58,17 @@ body {
     color: #fff;
     padding : 0 5px;
 }
-
+.game-informations {
+    font-family: "digital";
+    color: #98B1C9;
+    position: fixed;
+    top: 0;
+    height: 30px;
+    margin: 5px 2px 0 2px; padding: 0 40%;
+    font-size: 25px;
+}
+.game-informations img {
+    vertical-align: top;
+    max-height: 25px;
+}
 .show {visibility: visible !important;}

@@ -3,8 +3,9 @@ const rulesButton = document.getElementById("rules-btn");
 const closeRules = document.getElementById("close-btn");
 const gameOver = document.getElementById("you-loose");
 const sound = document.getElementById('sound-icon');
+const restart = document.getElementById("restart");
 
-let life = 3;
+let lifes = 3;
 let moveLeft = false;
 let moveRight = false;
 
