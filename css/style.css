@@ -64,7 +64,11 @@ body {
     position: fixed;
     top: 0;
     height: 30px;
-    padding: 0 40%;
-    vertical-align: text-top;
+    margin: 5px 2px 0 2px; padding: 0 40%;
+    font-size: 25px;
+}
+.game-informations img {
+    vertical-align: top;
+    max-height: 25px;
 }
 .show {visibility: visible !important;}
