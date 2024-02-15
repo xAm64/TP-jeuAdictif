@@ -2,6 +2,7 @@ const rules = document.getElementById("rules");
 const rulesButton = document.getElementById("rules-btn");
 const closeRules = document.getElementById("close-btn");
 const gameOver = document.getElementById("you-loose");
+const sound = document.getElementById('sound-icon');
 
 let life = 3;
 let moveLeft = false;
@@ -13,6 +14,15 @@ rulesButton.addEventListener("click", () =>{
 });
 closeRules.addEventListener("click", () =>{
     rules.classList.remove("show");
+});
+
+sound.addEventListener("click", () => {
+    sound.muted = true;
+    paddle_hit.muted = !paddle_hit.muted;
+    brick_hit.muted = !brick_hit.muted;
+    wall_hit.muted = !wall_hit.muted;
+    die.muted = !die.muted;
+    win.muted = !win.muted;
 });
 
 const gameSpace = document.querySelector('#gameSpace');
@@ -47,7 +57,7 @@ function onKeyUp(event) {
 //colisions
 function checkCollisionPaddle() {
     let ballX = ball.offsetLeft + ballRadius;
-    let ballBottomY = ball.offsetTop + ballRadius * 2;
+    let ballBottomY = ball.offsetTop + ballRadius;
 
     let paddleLeft = paddle.offsetLeft;
     let paddleTop = paddle.offsetTop;
@@ -58,6 +68,7 @@ function checkCollisionPaddle() {
     if (ballX > paddleLeft && ballX < paddleRight &&
         ballBottomY > paddleTop && ballBottomY < paddleBottom
     ) {
+        paddle_hit.play();
         ballDy = -ballDy;
 
         if (ballX < paddleLeft + paddle.offsetWidth / 2) {
@@ -84,10 +95,11 @@ function checkCollisionBricks() {
 
         // Collision
         if (ballX > brickLeft &&
-            ballX < brickRight &&
-            ballY + ballRadius > brickTop &&
+            ballX - ballRadius < brickRight &&
+            ballY > brickTop &&
             ballY - ballRadius < brickBottom
         ) {
+            brick_hit.play();
             ballDy = -ballDy;
             gameSpace.removeChild(b);
             bricks.splice(i, 1);
