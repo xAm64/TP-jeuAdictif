@@ -17,8 +17,8 @@
             <h2>Règles du jeu</h2>
             <p>
                 Utiliser les touches <span class="white">&#8592;</span> et <span class="white">&#8594;</span> du clavier pour déplacer la planche<br>
-                La balle doit rebondir sur la planche pour casser les briques.<br>
-                Si elle tombe, vous perdez une vie.<br>
+                Mohamed doit casser les briques et rebondir sur la planche<br>
+                Si il tombe, vous perdez une vie.<br>
                 Le jeu s'arrête quand vous n'avez plus de vie.
             </p>
             <button id="close-btn" class="btn close-btn">Sortir</button>
@@ -33,7 +33,11 @@
         </div>
         <!-- Affichage principale du jeu -->
         <div id="informations"><span>Vies 3</span> Score 0 level 0</div>
-        <canvas id="canvas" width="600" height="500"></canvas>
+        <div id="gameSpace">
+            <div id="ball"></div>
+            <div id="paddle"></div>
+        </div>
+        <!-- <canvas id="canvas" width="600" height="500"></canvas> -->
     </section>
     <!-- Scripts -->
     <script src="js/components.js"></script>
