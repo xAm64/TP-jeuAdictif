@@ -8,6 +8,7 @@ const restart = document.getElementById("restart");
 let lifes = 3;
 let moveLeft = false;
 let moveRight = false;
+let score = 0;
 
 //gestion affichage fonctionnement
 rulesButton.addEventListener("click", () =>{
@@ -104,6 +105,8 @@ function checkCollisionBricks() {
             ballDy = -ballDy;
             gameSpace.removeChild(b);
             bricks.splice(i, 1);
+            score ++;
+            document.getElementById("scoreGame").innerText = score;
         }
     }
 }

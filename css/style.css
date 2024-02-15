@@ -60,15 +60,16 @@ body {
 }
 .game-informations {
     font-family: "digital";
-    color: #98B1C9;
     position: fixed;
     top: 0;
     height: 30px;
-    margin: 5px 2px 0 2px; padding: 0 40%;
+    margin: 5px auto 0 auto; padding: 0 42%;
     font-size: 25px;
+    color: #43b6d6;
 }
 .game-informations img {
     vertical-align: top;
     max-height: 25px;
 }
+
 .show {visibility: visible !important;}
