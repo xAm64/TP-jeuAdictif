@@ -10,6 +10,7 @@ body {
 @font-face { font-family: "JotiOne"; src: url("../fonts/joti/JotiOne-Regular.ttf");}
 #gameSpace {
     position: relative;
+    top: 30px;
     width: 600px; height: 550px;
     box-sizing: border-box;
     background: black url(../images/background-game.png) no-repeat center;
@@ -57,5 +58,13 @@ body {
     color: #fff;
     padding : 0 5px;
 }
-.infos {font-family: "digital";}
+.game-informations {
+    font-family: "digital";
+    color: #98B1C9;
+    position: fixed;
+    top: 0;
+    height: 30px;
+    padding: 0 40%;
+    vertical-align: text-top;
+}
 .show {visibility: visible !important;}

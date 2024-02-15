@@ -3,8 +3,6 @@
 .rules {
     font-family: "JotiOne";
     position: absolute;
-    left: 40%;
-    top: 0;
     flex-flow: column;
     opacity: 0.9;
     visibility: hidden;

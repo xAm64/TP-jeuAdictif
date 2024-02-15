@@ -23,16 +23,18 @@ function moveBall() {
 
     // Limit Bottom
     if (currentPositionTop + (ballRadius * 2) > gameSpace.offsetHeight) {
-        lifes --;
         if (lifes > 0){
+            lifes --;
             currentPositionLeft = 285;
             currentPositionTop = 400;
             ballDy = -2;
+            document.getElementById("lives-rest").innerText = lifes;
         } else {
             ballDy = 0;
             ballDx = 0;
             gameOver.classList.add("show");
             restart.classList.add("show");
+            document.getElementById("lives-rest").innerText = lifes;
             restart.addEventListener("click", () =>{
                 location.reload();
             });
