@@ -28,7 +28,7 @@
 .rules p {
     margin: 0 auto .5rem auto;
 }
-
+/* espace jeux*/
 #gameSpace {
     position: relative;
     top: 30px;
@@ -40,7 +40,6 @@
     border-style: inset inset none inset;
     border-radius: 5px;
 }
-
 #paddle {
     position: absolute;
     bottom: 30px;
@@ -49,7 +48,6 @@
     border-radius: 10px;
     background: #da87f1 url(../images/49-Breakout-Tiles.png) no-repeat center/100%;
 }
-
 #ball {
     position: absolute;
     left: 285px;
@@ -59,7 +57,6 @@
     border-radius: 50%;
     background: url(../images/momo.png) center;
 }
-
 .brick {
     position: absolute;
     border: 1px solid #fff;
