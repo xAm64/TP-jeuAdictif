@@ -5,21 +5,18 @@ let ballDy = -2;
 function moveBall() {
     let currentPositionLeft = ball.offsetLeft;
     let currentPositionTop = ball.offsetTop;
-    // Colision à gauche
-    if (currentPositionLeft <= 0) {
+    // Colision à gauche et à droite
+    if ((currentPositionLeft <= 0) || (currentPositionLeft + ballRadius > gameSpace.offsetWidth)) {
         wall_hit.play();
         ballDx = -ballDx;
     }
-    // Colision à droite
-    if (currentPositionLeft + ballRadius > gameSpace.offsetWidth) {
-        wall_hit.play();
-        ballDx = -ballDx;
-    }
+    
     // colision en bas
     if (currentPositionTop <= 0) {
         wall_hit.play();
         ballDy = -ballDy;
     }
+    
     //Débloque la balle si coince en haut
     if ((currentPositionLeft <= 0 && currentPositionTop <= 0) || (currentPositionLeft + ballRadius > gameSpace.offsetWidth && currentPositionTop <= 0)) {
         balldx = ballDx * -1;
