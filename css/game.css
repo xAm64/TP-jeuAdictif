@@ -9,10 +9,10 @@
     justify-content: center;
     display: flex;
     align-items: center;
-    top: 0;
 }
 /* espace fin du jeu */
 #game-over {
+    top: 0;
     width: 400px;
     padding: 0 50%;
 }
@@ -24,6 +24,8 @@
     padding: 8px;
     border-radius: 6px;
     transition: visibility 400ms;
+    top: 690px;
+    left: 30%; right: 30%;
 }
 .rules p {
     margin: 0 auto .5rem auto;

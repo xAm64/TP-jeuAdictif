@@ -58,7 +58,7 @@ function onKeyUp(event) {
     }
 }
 
-//colisions avec le paddle
+//colisions avec le paddle (code de Gilles)
 function checkCollisionPaddle() {
     let ballX = ball.offsetLeft + ballRadius;
     let ballBottomY = ball.offsetTop + ballRadius;
@@ -66,16 +66,25 @@ function checkCollisionPaddle() {
     let paddleTop = paddle.offsetTop;
     let paddleRight = paddleLeft + paddle.offsetWidth;
     let paddleBottom = paddleTop + paddle.offsetHeight;
-    if (ballX > paddleLeft && ballX < paddleRight &&
-        ballBottomY > paddleTop && ballBottomY < paddleBottom
+
+    // Collision
+    if (
+        ballX > paddleLeft &&
+        ballX < paddleRight &&
+        ballBottomY > paddleTop &&
+        ballBottomY < paddleBottom
     ) {
         paddle_hit.play();
         ballDy = -ballDy;
         if (ballX < paddleLeft + paddle.offsetWidth / 2) {
             ballDx = -Math.abs(ballDx);
+        } else {
+        ballDx = Math.abs(ballDx);
         }
         if (ballX > paddleLeft + paddle.offsetWidth / 2) {
             ballDx = Math.abs(ballDx);
+        } else {
+            ballDx = -Math.abs(ballDx);
         }
     }
 }

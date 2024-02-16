@@ -4,7 +4,7 @@ const brickMargin = 10;
 let positionY = 30;
 let row = 3;
 let container = document.getElementById('gameSpace');
-//créer les briques
+//créer les briques (code de Fréd)
 function createBrick(){
     for(let i = 0; i < row; i++){
         let positionX = 20 + (i * 10);
