@@ -28,14 +28,13 @@ function moveBall() {
     if (currentPositionTop + (ballRadius * 2) > gameSpace.offsetHeight) {
         if (lifes > 0){
             lifes --;
-            currentPositionLeft = 285;
-            currentPositionTop = 400;
-            ballDy = -2;
+            resetBall();
+            die.play();
             document.getElementById("lives-rest").innerText = lifes;
         } else {
             ballDy = 0;
             ballDx = 0;
-            die.play();
+            cancelAnimationFrame(animationFrame);
             gameOver.classList.add("show");
             restart.classList.add("show");
             document.getElementById("lives-rest").innerText = lifes;
@@ -51,4 +50,10 @@ function moveBall() {
 
     ball.style.left = currentPositionLeft + 'px';
     ball.style.top = currentPositionTop + 'px';
+}
+
+function resetBall(){
+    currentPositionLeft = 285;
+    currentPositionTop = 400;
+    ballDy = -2;
 }
