@@ -23,7 +23,7 @@ function moveBall() {
     //Débloque la balle si coince en haut
     if ((currentPositionLeft <= 0 && currentPositionTop <= 0) || (currentPositionLeft + ballRadius > gameSpace.offsetWidth && currentPositionTop <= 0)) {
         balldx = ballDx * -1;
-        ballDy = ballDy * -1;
+        ballDy = -2;
     }
     // La balle tombe en bas
     if (currentPositionTop + (ballRadius * 2) > gameSpace.offsetHeight) {
