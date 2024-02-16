@@ -5,11 +5,11 @@ const gameOver = document.getElementById("you-loose");
 const winOver = document.getElementById('you-on');
 const sound = document.getElementById('sound-icon');
 const restart = document.getElementById("restart");
-
 let lifes = 3;
 let moveLeft = false;
 let moveRight = false;
 let score = 0;
+let speed = true;
 
 //gestion affichage fonctionnement
 rulesButton.addEventListener("click", () =>{
@@ -32,7 +32,6 @@ const gameSpace = document.querySelector('#gameSpace');
 const paddle = document.querySelector('#paddle');
 const ball = document.querySelector('#ball');
 let bricks = [];
-
 let animationFrame;
 
 //clavier
@@ -59,7 +58,7 @@ function onKeyUp(event) {
     }
 }
 
-//colisions
+//colisions avec le paddle
 function checkCollisionPaddle() {
     let ballX = ball.offsetLeft + ballRadius;
     let ballBottomY = ball.offsetTop + ballRadius;
@@ -111,6 +110,7 @@ function loop(){
         moveBall();
         checkCollisionPaddle();
         checkCollisionBricks();
+        speedBall();
         if(bricks.length === 0){
             win.play();
             winOver.classList.add('show');
@@ -122,6 +122,15 @@ function loop(){
         }
         loop();
     })
+}
+//accélère la balle tout les 50 points
+function speedBall(){
+    if (score > 0 && ((score % 5) == 0) && speed){
+        if (ballDy > 0) ballDy += 1;
+        else if (ballDy < 0) ballDy -= 1;
+        else ballDy = -2;
+        speed = false;
+    } else if (score > 0 && ((score % 5) != 0)) speed = true;
 }
 //initialisation du jeu
 function init() {
