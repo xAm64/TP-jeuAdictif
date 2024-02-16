@@ -1,5 +1,6 @@
 let ballRadius = 35;
-let ballDx = Math.floor(Math.random() * 6) -2;
+let ballDx = Math.floor(Math.random() * 5) + 1;
+    ballDx *= Math.random() < 0.5 ? -1 : 1;
 let ballDy = -2;
 //déplacement de la balle
 function moveBall() {
