@@ -17,7 +17,7 @@ rulesButton.addEventListener("click", () =>{
 closeRules.addEventListener("click", () =>{
     rules.classList.remove("show");
 });
-
+//son du jeu
 sound.addEventListener("click", () => {
     sound.muted = true;
     paddle_hit.muted = !paddle_hit.muted;
