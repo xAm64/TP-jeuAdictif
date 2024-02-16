@@ -13,7 +13,7 @@ function moveBall() {
     }
 
     // Limit Right
-    if (currentPositionLeft + ballRadius * 2 > gameSpace.offsetWidth) {
+    if (currentPositionLeft + ballRadius > gameSpace.offsetWidth) {
         wall_hit.play();
         ballDx = -ballDx;
     }
@@ -35,6 +35,7 @@ function moveBall() {
         } else {
             ballDy = 0;
             ballDx = 0;
+            die.play();
             gameOver.classList.add("show");
             restart.classList.add("show");
             document.getElementById("lives-rest").innerText = lifes;

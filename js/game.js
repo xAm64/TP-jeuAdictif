@@ -2,6 +2,7 @@ const rules = document.getElementById("rules");
 const rulesButton = document.getElementById("rules-btn");
 const closeRules = document.getElementById("close-btn");
 const gameOver = document.getElementById("you-loose");
+const winOver = document.getElementById('you-on');
 const sound = document.getElementById('sound-icon');
 const restart = document.getElementById("restart");
 
@@ -117,6 +118,16 @@ function loop(){
         moveBall();
         checkCollisionPaddle();
         checkCollisionBricks();
+
+        if(bricks.length === 0){
+            win.play();
+            winOver.classList.add('show');
+            restart.classList.add("show");
+            restart.addEventListener("click", () =>{
+                location.reload();
+            });
+            return;
+        }
 
         loop();
     })
