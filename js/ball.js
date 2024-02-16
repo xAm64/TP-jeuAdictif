@@ -1,35 +1,31 @@
 let ballRadius = 35;
 let ballDx = Math.floor(Math.random() * 6) -2;
 let ballDy = -2;
-
+//déplacement de la balle
 function moveBall() {
     let currentPositionLeft = ball.offsetLeft;
     let currentPositionTop = ball.offsetTop;
-
-    // Limit left
+    // Colision à gauche
     if (currentPositionLeft <= 0) {
         wall_hit.play();
         ballDx = -ballDx;
     }
-
-    // Limit Right
+    // Colision à droite
     if (currentPositionLeft + ballRadius > gameSpace.offsetWidth) {
         wall_hit.play();
         ballDx = -ballDx;
     }
-
-    // Limit Top
+    // colision en bas
     if (currentPositionTop <= 0) {
         wall_hit.play();
         ballDy = -ballDy;
     }
-    //renvoie la balle si coince en haut
+    //Débloque la balle si coince en haut
     if ((currentPositionLeft <= 0 && currentPositionTop <= 0) || (currentPositionLeft + ballRadius > gameSpace.offsetWidth && currentPositionTop <= 0)) {
         balldx = ballDx * -1;
         ballDy = ballDy * -1;
     }
-
-    // Limit Bottom
+    // La balle tombe en bas
     if (currentPositionTop + (ballRadius * 2) > gameSpace.offsetHeight) {
         if (lifes > 0){
             lifes --;
@@ -48,15 +44,12 @@ function moveBall() {
             });
         }
     }
-
     currentPositionLeft += ballDx;
     currentPositionTop += ballDy;
-
-
     ball.style.left = currentPositionLeft + 'px';
     ball.style.top = currentPositionTop + 'px';
 }
-
+//Réinitialise la balle
 function resetBall(){
     currentPositionLeft = 285;
     currentPositionTop = 400;

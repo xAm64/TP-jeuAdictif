@@ -27,7 +27,7 @@ sound.addEventListener("click", () => {
     die.muted = !die.muted;
     win.muted = !win.muted;
 });
-
+//Éléments du jeu
 const gameSpace = document.querySelector('#gameSpace');
 const paddle = document.querySelector('#paddle');
 const ball = document.querySelector('#ball');
@@ -40,6 +40,7 @@ function initKeyboardListener() {
     document.addEventListener('keydown', onKeyDown, false);
     document.addEventListener('keyup', onKeyUp, false);
 }
+//Quand appuye sur une touche
 function onKeyDown(event) {
     if (event.key === 'ArrowRight') {
         moveRight = true;
@@ -48,6 +49,7 @@ function onKeyDown(event) {
         moveLeft = true;
     }
 }
+//Quand on relache la touche
 function onKeyUp(event) {
     if (event.key === 'ArrowRight') {
         moveRight = false;
@@ -61,42 +63,33 @@ function onKeyUp(event) {
 function checkCollisionPaddle() {
     let ballX = ball.offsetLeft + ballRadius;
     let ballBottomY = ball.offsetTop + ballRadius;
-
     let paddleLeft = paddle.offsetLeft;
     let paddleTop = paddle.offsetTop;
     let paddleRight = paddleLeft + paddle.offsetWidth;
     let paddleBottom = paddleTop + paddle.offsetHeight;
-
-    // Collision
     if (ballX > paddleLeft && ballX < paddleRight &&
         ballBottomY > paddleTop && ballBottomY < paddleBottom
     ) {
         paddle_hit.play();
         ballDy = -ballDy;
-
         if (ballX < paddleLeft + paddle.offsetWidth / 2) {
             ballDx = -Math.abs(ballDx);
         }
-
         if (ballX > paddleLeft + paddle.offsetWidth / 2) {
             ballDx = Math.abs(ballDx);
         }
-
     }
 }
+// Colision avec les briques
 function checkCollisionBricks() {
     let ballX = ball.offsetLeft + ballRadius;
     let ballY = ball.offsetTop + ballRadius;
-
     for(let i = bricks.length - 1; i >= 0; i--) {
         let b = bricks[i];
-
         let brickLeft = b.offsetLeft;
         let brickTop = b.offsetTop;
         let brickRight = brickLeft + b.offsetWidth;
         let brickBottom = brickTop + b.offsetHeight;
-
-        // Collision
         if (ballX > brickLeft &&
             ballX - ballRadius < brickRight &&
             ballY > brickTop &&
@@ -111,14 +104,13 @@ function checkCollisionBricks() {
         }
     }
 }
-
+//annimation du jeu
 function loop(){
     animationFrame = window.requestAnimationFrame(function() {
         movePaddle();
         moveBall();
         checkCollisionPaddle();
         checkCollisionBricks();
-
         if(bricks.length === 0){
             win.play();
             winOver.classList.add('show');
@@ -128,16 +120,13 @@ function loop(){
             });
             return;
         }
-
         loop();
     })
 }
-
+//initialisation du jeu
 function init() {
     initKeyboardListener();
     createBrick();
-
     loop();
 }
-
 init();
