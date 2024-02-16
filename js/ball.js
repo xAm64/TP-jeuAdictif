@@ -7,7 +7,7 @@ function moveBall() {
     let currentPositionTop = ball.offsetTop;
 
     // Limit left
-    if (currentPositionLeft < 0) {
+    if (currentPositionLeft <= 0) {
         wall_hit.play();
         ballDx = -ballDx;
     }
@@ -19,9 +19,14 @@ function moveBall() {
     }
 
     // Limit Top
-    if (currentPositionTop < 0) {
+    if (currentPositionTop <= 0) {
         wall_hit.play();
         ballDy = -ballDy;
+    }
+    //renvoie la balle si coince en haut
+    if ((currentPositionLeft <= 0 && currentPositionTop <= 0) || (currentPositionLeft + ballRadius > gameSpace.offsetWidth && currentPositionTop <= 0)) {
+        balldx = ballDx * -1;
+        ballDy = ballDy * -1;
     }
 
     // Limit Bottom
